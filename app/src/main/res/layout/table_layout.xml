@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Please go through this link, i think it will help you out. http://developerlife.com/tutorials/?p=307
+Please note that the children of a TableLayout cannot specify their width – which is always FILL_PARENT.
+However, the height can be defined by a child, which defaults to WRAP_CONTENT. If the child is a TableRow, then the height is always WRAP_CONTENT.
+So if you use TableLayout with TableRows you can’t really can’t set the width/height (width=FILL_PARENT, and height=WRAP_CONTENT).
+By the way, a TableRow is just a subclass of LinearLayout. What you can do is specify the behavior of the column to shrink and/or stretch or not. You can also hide a column by calling setColumnCollapsed on a TableLayout, and passing it the column index. All column indices start at 0, and you can have empty columns.-->
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:weightSum="1"
+            >
+
+        <TextView
+                android:text="First"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:background="#F55"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:gravity="center_horizontal"
+                />
+
+        <TextView
+                android:text="Second"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:background="#65FF53"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:gravity="center_horizontal"/>
+
+        <TextView
+                android:text="Third"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:background="#DBC576"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:weightSum="1"
+            >
+
+        <TextView
+                android:text="First"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:background="#F55"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:gravity="center_horizontal"
+                />
+
+        <TextView
+                android:text="Second"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:background="#65FF53"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:gravity="center_horizontal"/>
+
+        <TextView
+                android:text="Third"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:background="#DBC576"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:gravity="center_horizontal"/>
+    </TableRow>
+
+</TableLayout>
